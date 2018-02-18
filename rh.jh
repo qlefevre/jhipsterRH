@@ -47,9 +47,6 @@ relationship OneToOne {
 	Employee{department} to Department
 }
 
-relationship OneToMany {
-	Department{employees} to Employee
-}
 
 
 
