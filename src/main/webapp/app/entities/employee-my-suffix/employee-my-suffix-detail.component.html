@@ -26,12 +26,6 @@
                 <a [routerLink]="['/department-my-suffix', employee.departmentId]">{{employee.departmentId}}</a>
             </div>
         </dd>
-        <dt><span>Department</span></dt>
-        <dd>
-            <div *ngIf="employee.departmentId">
-                <a [routerLink]="['/department-my-suffix', employee.departmentId]">{{employee.departmentId}}</a>
-            </div>
-        </dd>
     </dl>
 
     <button type="submit"

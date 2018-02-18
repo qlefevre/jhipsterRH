@@ -41,9 +41,6 @@ public class Employee implements Serializable {
     @JoinColumn(unique = true)
     private Department department;
 
-    @ManyToOne
-    private Department department;
-
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -103,19 +100,6 @@ public class Employee implements Serializable {
 
     public void setHireDate(Instant hireDate) {
         this.hireDate = hireDate;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public Employee department(Department department) {
-        this.department = department;
-        return this;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 
     public Department getDepartment() {

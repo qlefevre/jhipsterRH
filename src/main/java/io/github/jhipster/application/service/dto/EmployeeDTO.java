@@ -24,8 +24,6 @@ public class EmployeeDTO implements Serializable {
 
     private Long departmentId;
 
-    private Long departmentId;
-
     public Long getId() {
         return id;
     }
@@ -64,14 +62,6 @@ public class EmployeeDTO implements Serializable {
 
     public void setHireDate(Instant hireDate) {
         this.hireDate = hireDate;
-    }
-
-    public Long getDepartmentId() {
-        return departmentId;
-    }
-
-    public void setDepartmentId(Long departmentId) {
-        this.departmentId = departmentId;
     }
 
     public Long getDepartmentId() {
