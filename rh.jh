@@ -29,11 +29,6 @@ entity Department {
 
 
 
-entity JobHistory {
-	startDate Instant,
-	endDate Instant,
-	language Language
-}
 
 enum Role {
     USER, DRH, DG, DGA
@@ -57,30 +52,14 @@ relationship OneToMany {
 
 
 
-// defining multiple OneToMany relationships with comments
-relationship OneToMany {
-	Employee{job} to Job,
-	/**
-	* A relationship
-	*/
-	Department{employee} to
-	/**
-	* Another side of the same relationship
-	*/
-	Employee
-}
-
-relationship ManyToOne {
-	Employee{manager} to Employee
-}
-
-
 // Set pagination options
 // paginate JobHistory, Employee with infinite-scroll
 // paginate Job with pagination
 dto * with mapstruct
 
 // Set service options to all except few
-service all with serviceImpl except Employee, Job
+// service all with serviceImpl except Employee
+
 // Set an angular suffix
 angularSuffix * with mySuffix
+
