@@ -1,12 +1,13 @@
 
-entity User {
-	name String,
-	password String,
-}
+//entity User {
+//	name String,
+//	password String,
+//}
 
-entity Role {
-	name Role
-}
+
+//entity Role {
+//	name Role
+//}
 
 /**
  * The Employee entity.
@@ -30,17 +31,17 @@ entity Department {
 
 
 
-enum Role {
-    USER, DRH, DG, DGA
-}
+//enum Role {
+//    USER, DRH, DG, DGA
+//}
 
-relationship OneToOne {
-	User{employee} to Employee
-}
+//relationship OneToOne {
+//	User{employee} to Employee
+//}
 
-relationship OneToOne {
-	User{role} to Role
-}
+//relationship OneToOne {
+//	User{role} to Role
+//}
 
 relationship OneToOne {
 	Employee{department} to Department
