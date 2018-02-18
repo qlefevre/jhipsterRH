@@ -22,7 +22,6 @@
             <th><span>Email</span></th>
             <th><span>Hire Date</span></th>
             <th><span>Department</span></th>
-            <th><span>Department</span></th>
             <th></th>
             </tr>
             </thead>
@@ -33,11 +32,6 @@
                 <td>{{employee.lastName}}</td>
                 <td>{{employee.email}}</td>
                 <td>{{employee.hireDate | date:'medium'}}</td>
-                <td>
-                    <div *ngIf="employee.departmentId">
-                        <a [routerLink]="['../department-my-suffix', employee.departmentId  ]" >{{employee.departmentId}}</a>
-                    </div>
-                </td>
                 <td>
                     <div *ngIf="employee.departmentId">
                         <a [routerLink]="['../department-my-suffix', employee.departmentId  ]" >{{employee.departmentId}}</a>

@@ -22,8 +22,6 @@ export class EmployeeMySuffixDialogComponent implements OnInit {
 
     departments: DepartmentMySuffix[];
 
-    departments: DepartmentMySuffix[];
-
     constructor(
         public activeModal: NgbActiveModal,
         private jhiAlertService: JhiAlertService,
@@ -48,8 +46,6 @@ export class EmployeeMySuffixDialogComponent implements OnInit {
                         }, (subRes: HttpErrorResponse) => this.onError(subRes.message));
                 }
             }, (res: HttpErrorResponse) => this.onError(res.message));
-        this.departmentService.query()
-            .subscribe((res: HttpResponse<DepartmentMySuffix[]>) => { this.departments = res.body; }, (res: HttpErrorResponse) => this.onError(res.message));
     }
 
     clear() {
