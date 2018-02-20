@@ -19,9 +19,6 @@ entity Employee {
 	hireDate Instant
 }
 
-entity Congee {
-	date Instant
-}
 
 
 entity Department {
